@@ -1,0 +1,30 @@
+.wrapper {
+    border: 1px solid brown;
+    background-color: rosybrown;
+    width: 80%;
+    margin: auto;
+    display: flex;
+    overflow: scroll; /* or overflow: scroll */
+  }
+.Card{
+    border: 1px solid coral;
+    min-height: 200px;
+    min-width: 200px;
+    margin: 10px;
+    border-radius: 12px;
+    background-color: rgb(206, 231, 255);
+    
+}
+.Card>img{
+    background-color: antiquewhite;
+    height: 100px;
+    width: 100px;
+    border-radius: 50%;
+}
+/* .wrapper::-webkit-scrollbar{
+    display: none;
+} */
+.wrapper::-webkit-scrollbar-thumb {
+    background-color: #888;
+    border-radius: 5px;
+  }
