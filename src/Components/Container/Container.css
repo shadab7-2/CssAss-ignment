@@ -1,0 +1,12 @@
+.board-container{
+    border: 1px solid chocolate;
+    margin: 40px;
+    background-color: aquamarine;
+    
+}
+.board-row{
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    
+}
