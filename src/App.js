@@ -1,25 +1,38 @@
-import logo from './logo.svg';
-import './App.css';
+import React, { useState } from 'react';
+import './App.css'
+const WordList = () => {
+  const initialWords = [
+    'apple',
+    'banana',
+    'carrot',
+    'dog',
+    'elephant',
+    'frog',
+    'giraffe',
+    'hamburger',
+    'igloo',
+    'jellyfish'
+  ];
 
-function App() {
+  const [words, setWords] = useState(initialWords);
+
+  const handleDelete = (index) => {
+    const updatedWords = [...words];
+    updatedWords.splice(index, 1);
+    setWords(updatedWords);
+  };
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div className='container'>
+      <h1 className='heading'>Word List</h1>
+      {words.map((word, index) => (
+        <div key={index} className='list'>
+          {word}
+          <button onClick={() => handleDelete(index)}>Delete</button>
+        </div>
+      ))}
     </div>
   );
-}
+};
 
-export default App;
+export default WordList;
