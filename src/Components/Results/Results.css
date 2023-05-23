@@ -1,0 +1,17 @@
+.search-results{
+    margin: 1px;
+    padding: 5px;
+    border: 1px solid rgb(117, 177, 157);
+    border-radius: 10px;
+}
+.result-button:hover{
+    color: rgb(72, 119, 115);
+     
+}
+.result-button{
+    width: 100%;
+    height: 100%;
+    background-color: white;
+    border-radius: 10px;
+    border: 0;
+}
